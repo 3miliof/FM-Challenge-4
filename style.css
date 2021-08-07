@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+.bgDesktop {
+    display: none;
+}
+
+.womanDesktop {
+    display: none;
+}
+
+.bgBoxImg {
+    display: none;
+}
+
+.wholePage {
+    background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    height: 100vh;
+    width: 100vw;
+}
+
+.backgroundBox {
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.bgMobile {
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: 20vh;
+    z-index: 2;
+    width: 63vw;
+}
+
+.womanMobile {
+    right: 50vw;
+    position: absolute;
+    top: 20vh;
+    transform:translate(45%, -55%);
+    z-index: 1;
+    width: 70vw;
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30vw;
+}
+
+.title {
+    font-size: 1.75em;
+    font-weight: 700;
+    color: hsl(237, 12%, 33%);
+    margin-top: 5vw;
+}
+
+.accordianContainer {
+    vertical-align: middle;
+    bottom: 5vw;
+    margin-bottom: 10vw;
+}
+
+.accordian {
+    margin-top: 2vw;
+    width: 90%;
+    margin-left: 5%;
+    font-size: .75em;
+}
+
+.accordian .contentbox {
+    position: relative;
+    width: 100%;
+    margin-top: 6vw;
+    color: hsl(240, 6%, 50%);
+}
+
+.accordian .contentbox .question {
+    color: hsl(237, 12%, 33%);
+    position: relative;
+    margin-bottom: 2vw;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.accordian .contentbox .question::before {
+    position: absolute;
+    content: '';
+    background-image: url(images/icon-arrow-down.svg);
+    width: 3.5vw;
+    height: 2.5vw;
+    background-size: cover;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.divider{
+    position: relative;
+    background-size: cover;
+    content: '';
+    height: .1vh;
+    background-color: hsl(240, 5%, 91%);
+    width: 100%;
+}
+
+.accordian .contentbox .answer {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 93%;
+    margin-left: 0;
+    color: hsl(240, 6%, 50%);
+}
+
+.accordian .contentbox.active .question {
+    font-weight: 700;
+    color: hsl(237, 12%, 33%);
+}
+
+.accordian .contentbox.active .answer {
+    height: auto;
+}
+
+.accordian .contentbox.active .answer > p {
+    width: 100%;
+    margin-top: auto;
+    color: hsl(240, 6%, 50%)
+}
+
+.accordian .contentbox.active .question::before {
+    transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 768px) {
+
+    .womanMobile {
+        max-width: 40vw;
+        top: 17.5vw;
+    }
+
+    .bgMobile {
+        max-width: 33vw;
+        top: 17.5vw;
+       
+    }
+
+    .backgroundBox {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-top: 17.5vh;
+    }
+
+    .FAQ {
+        margin-top: 10vw;
+        font-size: 1.3em;
+    }
+
+    .accordian {
+        margin-top: 0;
+    }
+    .accordianContainer {
+        margin-bottom: 5vw;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .womanMobile {
+        max-width: 30vw;
+        top: 12.5vw;
+    }
+    .bgMobile {
+        top: 12.5vw;
+        max-width: 27vw;
+    }
+
+    .backgroundBox {
+        margin-top: 12.5vw;
+    }
+
+    .accordian .contentbox {
+        margin-top: 2.5vw;
+    }
+
+    .accordian .contentbox .question::before {
+        width: 1.5vw;
+        height: 1vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .womanMobile {
+        display: none
+    }
+    .bgMobile {
+        display: none;
+    }
+
+    .desktopGraphics {
+        width: 100%;
+        position: absolute;
+        height: 70vh;
+    }
+
+    .womanDesktop {
+        display: block;
+        position: absolute;
+        left: -5vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .bgDesktop {
+        display: block;
+        position: absolute;
+        width: 75%;
+        top: -35%;
+        left: -47.5%;
+        
+    }
+
+    .bgBoxImg{
+        display: block;
+        position: absolute;
+        top: 45%;
+        width: 11vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .backgroundBox {
+        width: 70vw;
+        margin-top: 15vh;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    .FAQ {
+        font-size: 1.1em;
+        margin-top: 1vw;
+        width: 40%;
+        left: 40%;
+        position: relative;
+        transform: translateX(-50%);
+    }
+
+    .title {
+        margin-top: 3vw;
+        margin-left: 5%;
+    }
+
+    .accordian .contentbox .question {
+        margin-bottom: 1vw;
+    }
+
+    .accordian .contentbox .answer {
+        width: 70%;
+        margin-bottom: .5vw;
+    }
+
+    .accordian .contentbox .question:hover {
+        color: hsl(14, 88%, 65%);
+    }
+
+}
+
