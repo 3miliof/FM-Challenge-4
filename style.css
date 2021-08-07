@@ -97,7 +97,7 @@
 .accordian .contentbox .question::before {
     position: absolute;
     content: '';
-    background-image: url(images/icon-arrow-down.svg);
+    background-image: url(icon-arrow-down.svg);
     width: 3.5vw;
     height: 2.5vw;
     background-size: cover;
