@@ -221,6 +221,8 @@
         position: absolute;
         left: -5vw;
         top: 50%;
+        max-width: 35vw;
+        width: 35vw;
         transform: translateY(-50%);
     }
     .bgDesktop {
